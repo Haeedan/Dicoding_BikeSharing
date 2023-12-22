@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 df_bike_sharing = pd.read_csv("dataset.csv")
-df_bike_sharing['dteday'] = pd.to_datetime(df_bike_sharing['dteday'], format='%Y %m %d')
 df_temp_rent = df_bike_sharing[['season', 'temp', 'cnt']]
 st.scatter_chart(df_temp_rent, x='temp', y='cnt')
 
